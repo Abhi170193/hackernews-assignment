@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row align-items-start">
+        <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 heading-div">
+            <h3>Hacker News</h3>
+        </div>
+    </div>
+
+</div>
+<div class="container content-background p-5" *ngIf="newsDetails">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 news-heading">
+            <p>{{newsDetails.title ||''}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+            <p> {{newsDetails.score || ''}} point by {{newsDetails.by || ''}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 text-line-height">
+            <p [innerHtml]="newsDetails.text || ''"></p>
+        </div>
+    </div>
+
+</div>

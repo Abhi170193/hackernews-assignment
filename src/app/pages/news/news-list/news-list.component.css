@@ -1,0 +1,26 @@
+.heading-div {
+    background-color: #ff6600;
+    color: black;
+}
+
+.p-5 {
+    padding: 5px;
+}
+
+.content-background {
+    background: #f6f6ef;
+    border-bottom: 1px solid #d7d7d3;
+}
+
+.news-heading {
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.subContent {
+    font-size: 12px;
+    color: black;
+    margin-top: 5px;
+}
