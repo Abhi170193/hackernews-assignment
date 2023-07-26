@@ -1,7 +1,18 @@
+
 # HackernewsApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.8.
 
+## To run the project from Github. The step is listed below
+  1. First clone project from Github using the below command
+      a. git clone https://github.com/Abhi170193/hackernews-assignment.git
+  2. Go to project on terminal
+  3. Install node modules using the command
+      a. npm install
+  4. Then run the command to serve on the http://localhost:4200
+      a. ng s
+  5. Go to the browser and type http://localhost:4200 and see the output
+     
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
