@@ -13,9 +13,9 @@ export class NewDetailsComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private newSrv: NewService) { }
 
   ngOnInit(): void {
+    //ActivatedRoute is used to get Param Id from the URL and fetch newsdetails according to the Id
     this.activatedRoute.paramMap.subscribe((params: ParamMap) => {
       this.id = parseInt(params.get('id')!);
-      console.log(this.id)
       this.getNewDetails(this.id)
     })
   }

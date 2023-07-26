@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./news-list.component.css']
 })
 export class NewsListComponent implements OnInit {
+  // On Particular page Limit of Item shown in Page is 30 and Page number is started from 0.
   pageNumber: any = 0
   pageLimit: any = 30
   newsList: any = []
@@ -19,6 +20,9 @@ export class NewsListComponent implements OnInit {
   ngOnInit(): void {
     this.getNewList()
   }
+  /**
+  * getNewList function is used to get new list which is shown in new page
+  */
   getNewList() {
     this.newSrv.getLatestNews().subscribe(async (res: any) => {
       this.newsList = res
@@ -27,6 +31,10 @@ export class NewsListComponent implements OnInit {
       }
     })
   }
+  /**
+   * GetNewsDetails function is used to get detail of new using Id and push into array and Pagination logic perform in it.
+   * @param data is array of news list
+   */
   async getNewDetails(data: any) {
     let firstIndex: any = this.pageLimit * this.pageNumber
     let secondIndex: any = this.pageNumber === 0 ? this.pageLimit : this.pageLimit + this.pageNumber * this.pageLimit
@@ -38,12 +46,18 @@ export class NewsListComponent implements OnInit {
       })
     }
   }
+  /**
+  * OnScroll function is used to perform infinite scroll
+  */
   onScroll() {
     this.pageNumber = this.pageNumber + 1
     this.getNewDetails(this.newsList)
   }
+  /**
+  * RedirectToPage function is used to redirect on the detail route using condition
+  * @param list details of news
+  */
   redirectToPage(list: any) {
-    console.log(list)
     if (list.url) {
       window.location.href = list.url;
     }
